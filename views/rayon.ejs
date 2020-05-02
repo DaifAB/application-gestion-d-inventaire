@@ -1,0 +1,55 @@
+<%- include('header'); -%>
+
+        
+    <h1>Rayons :</h1>
+   
+    <div class="container">
+
+    <table class="table table-striped table-dark">
+        <thead>
+            <tr class="table100-head">  
+                <th class="column">ID</th>  
+                <th class="column">Categorie</th>  
+                               
+                <th style="width: 50px;" class="column"></th>  
+                <th style="width: 80px;" class="column"></th>  
+
+
+
+            </tr>  
+        </thead>
+        <tbody>  
+            <% rayons.forEach(function (ray) { %>
+               <tr>  
+                   <td class="column"><%= ray.id %> </td>  
+                   <td class="column"><%= ray.categorie %></td>  
+                   
+                
+                   <td><a href="/delete/cat/<%= ray.id %>" class="btn btn-sm btn-danger">Delete</a>
+                   </td>
+                   <td><a href="/updatedepartment/<%= ray.id %> " class="btn btn-sm btn-success"> UPDATE</a> </td>
+
+               </tr>
+                                                  
+            <% }) %>
+            </tbody>
+    </table>
+  
+        <div class="link">
+
+        <a href="/addcat" class="add">/Add Rayon</a>
+        <a href="/" class="add">/Produits</a>
+    </div>
+
+    </div>
+
+
+
+
+
+        
+
+
+</body>
+
+</html>
